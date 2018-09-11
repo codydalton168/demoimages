@@ -1,0 +1,74 @@
+
+
+/*massage*/
+
+
+.meassage_box{
+       margin:0px auto 0px auto;
+       background-color:#fff;
+	width:550px;
+	height:240px;
+	line-height:240px;
+	border:1px solid #535353;
+
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+
+	-webkit-box-shadow: 0 0 15px 1px  #0066FF;
+	-moz-box-shadow: 0 0 15px 1px  #0066FF;
+	box-shadow: 0 0 15px 1px  #0066FF;
+}
+
+
+.meassage_box_title{
+	width:546px;
+	height:40px;
+       line-height:30px;
+       padding: 4px 0px 0px 4px;
+       background-color: #DDDDDD ;
+       color:#000;
+       text-align: left;
+	font-size: 16px;
+	border-top-left-radius:8px;
+	border-top-right-radius:8px;
+	-moz-border-top-right-radius:8px;
+	-moz-border-top-left-radius:8px;
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+}
+
+
+
+
+.meassage_box_connet{
+	margin:40px auto 0px auto;
+       border:0px solid #535353;
+	width:500px;
+	height:130px;
+	word-wrap:break-word;
+	word-break:break-all;
+       line-height:20px;
+	font-size: 16px;
+	font-family:Microsoft JhengHei,Microsoft Yahei,'SimSun',Arial,Sans-Serif;
+       word-break: break-all;
+}
+
+
+
+
+@media (max-width:767px) {
+
+	.meassage_box{
+		width:300px;
+	}
+	.meassage_box_title{
+		width:298px;
+	}
+	.meassage_box_connet{
+		width:300px;
+	}
+
+}
+
+

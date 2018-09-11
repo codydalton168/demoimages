@@ -1,0 +1,73 @@
+<!--<?php print <<<EOT
+--><!DOCTYPE HTML>
+<html lang="zh-Hant-TW">
+<head>
+<title>尼康數位科</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="windows-Target" contect="_top">
+<meta name="copyright" content="本網頁由尼康數位科技設計">
+<meta http-equiv="Content-Language" content="zh-TW">
+<meta http-equiv='X-UA-Compatible' content='IE=Edge;requiresActiveX=true,chrome=1'/>
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="robots" content="noindex">
+<meta http-equiv="expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/meassage.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.11.3.min.js"></script>
+<body>
+
+
+<div class="meassage_box"  align="center">
+	   	<div class="meassage_box_title">提示</div>
+	   	<div class="meassage_box_connet">$msg <br /><br /><br /><br />
+
+<!--
+EOT;
+if($jumpurl){print <<<EOT
+-->
+<meta http-equiv='refresh' content='$Second; url=$jumpurl'>
+
+<a href="$jumpurl"><font color=red>如果未自動跳轉,請按這邊..</font></a>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+<input class="btn" type="button" value="返 回" onclick="javascript:history.go(-1);" />
+<!--
+EOT;
+}print <<<EOT
+-->
+		</div>
+</div>
+
+
+<script>
+$(document).ready(function(){
+
+
+	$(window).resize(function(){
+       	$(".meassage_box").css('margin-top',$(window).height()/2 - $('.meassage_box').height()/2   + "px");
+       });
+
+
+
+
+       $(".meassage_box").css('margin-top',$(window).height()/2 - $('.meassage_box').height()/2   + "px");
+
+
+});
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
+<!--
+EOT;
+?>-->

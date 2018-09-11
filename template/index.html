@@ -1,0 +1,147 @@
+<!--<?php print <<<EOT
+--><!DOCTYPE html>
+<html lang="utf-8"> 
+<head> 
+<meta charset="utf-8">         
+<meta http-equiv="X-UA-Compatible" content="IE=edge">         
+<meta name="viewport" content="width=device-width, initial-scale=1.0">         
+<meta name="description" content="">         
+<meta name="author" content="">         
+<title>尼康數位整合行銷響應式網頁模板SAMPLE演示頁面</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+
+
+
+
+
+<!--[if !IE|gte IE 9]>-->
+<script type="text/javascript" src="admin/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="admin/js/jquery-migrate-1.2.1.min.js"></script>
+<![endif]-->
+
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/html5shiv.min.js"></script>
+<script type="text/javascript" src="js/respond.min.js"></script>
+<![endif]-->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.sliphover.min.js"></script>
+
+
+
+</head>     
+<body>
+<div id="gotop" title="回到頂部"></div>
+<div class="navbar navbar-inverse navbar-fixed-top">
+       <div class="container">
+                <div class="navbar-header">
+                            <a class="navbar-brand" href="http://www.precise-marketing.com/" target="_blank">尼康數位整合行銷響應式網頁模板SAMPLE演示頁面</a>
+                </div>
+       </div>
+</div>
+
+<div class="container">
+       <div class="starter-template">
+$content
+       </div>
+</div>
+
+
+
+<div class="container">
+       <ul class="menuLink clear">
+              <li ><a href="index-category-all.html" $class_all style="padding:10px 20px;"><img src="images/all.png"> <br /> 全 部</a></li>
+
+<!--
+EOT;
+foreach($categoryname as $key => $value){
+$rtime = $value[InputFile] && file_exists($value[InputFile]) ? "<img src=\"$value[InputFile]\"> <br />" : "";
+print <<<EOT
+-->
+       <li><a href="index.php?category=$key" ${'class_'.$key}>{$rtime}{$value[subject]}</a></li>
+<!--
+EOT;
+} print <<<EOT
+-->
+
+       </ul>
+
+</div>
+<div class="container">
+       <hr color="#ccc" size="1" >
+</div>
+
+
+
+
+<div class="container" id="sliphover">
+       $pages
+
+            <div class="row"> 
+
+<!--
+EOT;
+foreach ($newslist  as  $k => $v){
+$descriptiontxt=$descriptioncaption='';
+if($v[description]){
+
+       $descriptioncaption = "<hr/><p>$v[description]</p>";
+
+       $descriptiontxt = "<hr/><p style=\"color:#000;\">$v[description]</p>";
+}
+
+print <<<EOT
+-->
+
+                <div class="col-md-4 col-sm-4">
+
+                            <div class="Figureshows">
+
+                                   <a href="$v[httpurl]" target="_blank">
+                                          <div class="item" data-caption="<h3>$v[subject]</h3>$descriptioncaption">
+                                                 <img src="$v[images]" onerror="this.src='images/no-photo-available.jpg';" class="img-rounded img-responsive"  style="">
+                                                 <br /><h3 style="color:#000;">$v[subject]</h3>$descriptiontxt
+                                          </div>
+                                   </a>
+                            </div>
+
+                </div>
+<!--
+EOT;
+}print <<<EOT
+-->
+
+       <!--  data-caption="<h3>$v[subject]</h3>$description"  -->
+       </div>
+
+
+       $pages
+</div>
+
+
+
+
+<script type="text/javascript">
+
+</script>
+
+
+
+
+<script type="text/javascript" src="js/global.js"></script>
+
+
+
+       
+    </body>     
+</html>
+
+
+
+
+<!--
+EOT;
+?>-->

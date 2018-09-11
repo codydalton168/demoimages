@@ -1,0 +1,9 @@
+﻿#
+# robots.txt for BOARD
+# 
+#
+# 下面禁用搜尋引擎訪問路徑
+
+
+User-agent: *
+Disallow: /
