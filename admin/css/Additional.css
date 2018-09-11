@@ -1,0 +1,85 @@
+/*消除 chrome firefox safari  點選 input, textarea  加邊框的效果 */
+input,textarea{outline:none;resize: none;}
+/*去除 chrome  firefox safari 超連接底線*/
+a,a:hover,a:link,a:visited{text-decoration: none !important;}
+
+
+/*通用*/
+.b{ font-weight:700;}
+.w{white-space:nowrap}
+.tal{text-align:left}
+.tac{text-align:center}
+.tar{text-align:right}
+.fr{float:right}
+.fl{float:left}
+.pr{position:relative}
+.cp{cursor:pointer;}
+.va{vertical-align:middle;}
+.tr th,.tr td{text-align:center;}
+
+
+
+
+
+
+
+
+
+
+/*
+
+響應式表格
+*/
+
+@media only screen and (max-width: 800px) {
+
+	#no-more-tables table,
+	#no-more-tables thead,
+	#no-more-tables tbody,
+	#no-more-tables th,
+	#no-more-tables td,
+	#no-more-tables tr {
+	 	display: block;
+	}
+
+	#no-more-tables thead tr {
+		 position: absolute;
+		 top: -9999px;
+		 left: -9999px;
+	}
+
+	#no-more-tables tr { border: 1px solid #ccc; }
+
+	#no-more-tables td {
+		 border: none;
+		 border-bottom: 1px solid #eee;
+		 position: relative;
+		 padding-left: 20%;
+		 white-space: normal;
+		 text-align:left;
+	}
+
+
+
+	#no-more-tables td:before {
+		/*position:relative;*/
+              position:absolute;
+		top: 0px;
+		left: 0px;
+		width:10%;
+		padding:0px;
+		white-space: nowrap;
+		float:left;
+              word-break: normal;
+	}
+
+	#no-more-tables td:before {
+		content: attr(data-title);
+		padding-left: 1px;
+              padding-top:6px;
+		font-weight: bold;
+              word-break: normal;
+	}
+
+
+}
